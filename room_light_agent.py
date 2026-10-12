@@ -1,3 +1,4 @@
+
 def room_light_agent(percept):
     if percept == "Dark":
         return "Turn Light ON"
@@ -5,10 +6,19 @@ def room_light_agent(percept):
         return "Turn Light OFF"
     elif percept == "Dim":
         return "Leave Light As Is"
+    elif percept == "Very Bright":
+        return "Turn Light OFF"
     else:
         return "Invalid Percept"
 
-percept_sequence = ["Dark", "Dim", "Bright", "Dark"]
+
+percept_sequence = [
+    "Dark",
+    "Dim",
+    "Bright",
+    "Dark",
+    "Very Bright"
+]
 
 print("Percept\tAction")
 

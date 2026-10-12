@@ -1,16 +1,16 @@
 table = {
     "Red": "Stop",
     "Yellow": "Slow Down",
-    "Green": "Go"
+    "Green": "Go",
+    "Flashing Red": "Stop and Proceed with Caution"
 }
 
 def traffic_light_agent(percept):
-    return table.get(percept, "Unknown Signal")
+    return table[percept]
 
-percept_sequence = ["Red", "Green", "Yellow", "Red"]
+percept_sequence = ["Red", "Green", "Yellow", "Red", "Flashing Red"]
 
 print("Percept\t\tAction")
 
-for percept in percept_sequence:
-    action = traffic_light_agent(percept)
-    print(percept, "\t\t", action)
+for color in percept_sequence:
+    print(color, "\t", traffic_light_agent(color))
